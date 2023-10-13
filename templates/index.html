@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/assets/css/style.css">
+    <link rel="shortcut icon" href="favicon.com" type="image/x-icon">    
+    <!----GOOGLE FONTS ROBOTO--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap" rel="stylesheet">
+    <!----end_GOOGLE FONTS ROBOTO--->
+    <!--FAVICON-->
+    <link rel="icon" type="image/png" href="../static/assets/img/youtube-icon.ico">
+    <!--end_FAVICON-->
+    <!--MATERIAL DESIGN ICON-->
+    <!-- base CSS classes (required) -->
+    <link href="css/material-icons-base.min.css" rel="stylesheet">
+    <!-- loads Material Icons Regular font -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <!-- loads Material Icons Outlined font -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- loads Material Icons Round font -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+    <!-- loads Material Icons Sharp font -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+    <!-- loads Material Icons Two Tone font -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet">
+    <!--end_MATERIAL DESIGN ICON-->
+    <title>Clon de youtube</title>
+</head>
+<body>
+    <header>
+        <section class="header-container display-center">
+            <div class="navbar display-center">
+                <div class="logo-container display-center">
+                    <button onclick="burgerButton()">
+                        <i class="material-icons-outlined">menu</i>
+                    </button>
+                    <div class="logo-content display-center">
+                        <img src="../static/assets/img/YouTube_Logo.png" alt="Youtube Logo">
+                    </div>                    
+                    <span><sup>CO</sup></span>
+                </div>
+                <div class="searchbar-section">
+                    <div class="searchbar-container display-center">
+                        <div class="searchbar-content display-center">
+                            <input id="searchBar" type="text" name="" id="" placeholder="Buscar">
+                        </div>
+                        <button class="searchbar-button" onclick="findItem()">
+                            <i class="material-icons">search</i>
+                        </button>
+                    </div>
+                    <div class="search-voice display-center">
+                        <i class="material-icons">keyboard_voice</i>
+                    </div>
+                </div>
+                <div class="user-option">
+                    <div class="user-option-content display-center">
+                        <i class="material-icons-outlined">video_call</i>
+                    </div>
+                    <div class="user-option-content display-center">
+                        <i class="material-icons">notifications_none</i>
+                    </div>                   
+                    <div class="user-avatar display-center">
+                        <img src="../static/assets/img/youtube_avatar.png" alt="User Avatar">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="trending" class="trending-container">
+            <div class="trending-content display-center trending-tag-selected">
+                <span>Todo</span>
+            </div>
+            <div class="trending-content display-center">
+                <span>Música</span>
+            </div>
+            <div class="trending-content display-center">
+                <span>Entrevistas Periodísticas</span>
+            </div>
+            <div class="trending-content display-center">
+                <span>Música</span>
+            </div>
+            <div class="trending-content display-center">
+                <span>Entrevistas Periodísticas</span>
+            </div>
+            <div class="trending-content display-center">
+                <span>Historia</span>
+            </div>
+            <div class="trending-content display-center">
+                <span>Programación Web</span>
+            </div>
+            <div class="trending-content display-center">
+                <span>Educación Informática</span>
+            </div>
+            <div class="trending-content display-center">
+                <span>Cine</span>
+            </div>
+            <div class="trending-content display-center">
+                <span>Video Juegos</span>
+            </div>
+            <div class="trending-content display-center">
+                <span>Arte</span>
+            </div>
+            <div class="trending-content display-center">
+                <span>Comida</span>
+            </div>
+            <div class="trending-content display-center">
+                <span>Deporte</span>
+            </div>
+            <div class="trending-content display-center">
+                <span>Series</span>
+            </div>
+            <div class="trending-content display-center">
+                <span>Noticias</span>
+            </div>
+            <div class="trending-content display-center">
+                <span>Noticias de Hollywood</span>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="sidebar display-center">
+            <div class="sidebar-container sidebar-top display-center">
+                <div class="sidebar-content">
+                    <ul class="sidebar-home">
+                        <li class="sidebar-home-content">
+                            <div class="sidebar-icon">
+                                <i class="material-icons">home_filled</i>                               
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Inicio</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-home-content">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/shorts.png" alt="Shorts">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Shorts</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-home-content">
+                            <div class="sidebar-icon">
+                                <i class="material-icons-outlined">subscriptions</i>                                
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Suscripciones</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-container sidebar-middler display-center">
+                <div class="sidebar-content">
+                    <ul class="sidebar-options">
+                        <li class="sidebar-options-content display-center">
+                            <div class="sidebar-icon">
+                                <i class="material-icons-outlined">video_library</i>
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Biblioteca</span>
+                            </div>                           
+                        </li>
+                        <li class="sidebar-options-content display-center">
+                            <div class="sidebar-icon">
+                                <i class="material-icons-outlined">history</i>
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Historial</span>
+                            </div>                           
+                        </li>
+                        <li class="sidebar-options-content display-center">
+                            <div class="sidebar-icon">
+                                <i class="material-icons-outlined">slideshow</i>
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Tus videos</span>
+                            </div>                              
+                        </li>
+                        <li class="sidebar-options-content display-center">
+                            <div class="sidebar-icon">
+                                <i class="material-icons-outlined">access_time</i>                                
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Ver más tarde</span>
+                            </div>       
+                        </li>                            
+                        <li class="sidebar-options-content display-center">
+                            <div class="sidebar-icon">
+                                <i class="material-icons-outlined">playlist_play</i>                                
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Mi música</span>
+                            </div>       
+                        </li> 
+                        <li class="sidebar-options-content display-center">
+                            <div class="sidebar-icon">
+                                <i class="material-icons-outlined">expand_more</i>
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Mostrar más</span>
+                            </div>                             
+                        </li>                          
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-container sidebar-bottom display-center">
+                <div class="sidebar-content">
+                    <h2>Suscripciones</h2>
+                    <ul class="sidebar-subs">
+                        <li class="sidebar-subs-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/cosmosapiens_image.sidebar.jpg" alt="Cosmosapiens image">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Cosmosapiens</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-subs-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/royal_stats_image-sidebar.jpg" alt="Royal Stats image">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Roylab Stats</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-subs-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/ciencia_de_sofa_image-sidebar.jpg" alt="Ciencia de sofa image">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>CienciaDeSofa</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-subs-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/level_up_image-sidebar.jpg" alt="Level Up image">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Levelup.com</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-subs-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/la_risa_cura_image-sidebar.jpg" alt="La Risa Cura image">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>La Risa Cura</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-subs-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/fucks_news_image-sidebar.jpg" alt="F*cksNews image">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>F*cksNews</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-subs-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/vsx_project-sidebar.jpg" alt="VSX Project image">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>VSXProject</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-subs-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/el_robot_de_platon_image-sidebar.jpg" alt="Rl Robot de Platón image">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>El Robot de Platón</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-container sidebar-bottom-2 display-center">
+                <div class="sidebar-content">
+                    <h2>Explorar</h2>
+                    <ul class="sidebar-options">
+                        <li class="sidebar-options-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/trendingYT.png" alt="trending option">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Tendencias</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-options-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/musicYT.png" alt="music option">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Música</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-options-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/liveYT.png" alt="live option">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>En directo</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-options-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/gameYT.png" alt="game option">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Videojuegos</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-options-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/newsYT.png" alt="news option">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Noticias</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-options-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/sportYT.png" alt="sport option">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Deportes</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-options-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/learningYT.png" alt="learning option">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Aprendizaje</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-container sidebar-bottom-yt display-center">
+                <div class="sidebar-content">
+                    <h2>Más de YouTube</h2>
+                    <ul class="sidebar-yt-options">
+                        <li class="sidebar-yt-options-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/premiumYT.png" alt="premium option">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>YouTube Premium</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-yt-options-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/studioYT.png" alt="studio option">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>YouTube Studio</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-yt-options-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/ytmusicYT.png" alt="music option">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>YouTube Music</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-yt-options-content display-center">
+                            <div class="sidebar-icon">
+                                <img src="../static/assets/img/sidebar-images/kidsYT.png" alt="kids option">
+                            </div>
+                            <div class="sidebar-title">
+                                <span>YouTube Kids</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-container sidebar-bottom-yt display-center">
+                <div class="sidebar-content">
+                    <ul class="sidebar-yt-options">
+                        <li class="sidebar-yt-options-content display-center">
+                            <div class="sidebar-icon">
+                                <i class="material-icons-outlined">settings</i>
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Configuración</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-yt-options-content display-center">
+                            <div class="sidebar-icon">
+                                <i class="material-icons-outlined">flag</i>
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Historial de denuncias</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-yt-options-content display-center">
+                            <div class="sidebar-icon">
+                                <i class="material-icons-outlined">help</i>
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Ayuda</span>
+                            </div>
+                        </li>
+                        <li class="sidebar-yt-options-content display-center">
+                            <div class="sidebar-icon">
+                                <i class="material-icons-outlined">info</i>
+                            </div>
+                            <div class="sidebar-title">
+                                <span>Enviar sugerencias</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-footer-container sidebar-footer display-center">
+                <div class="sidebar-content">
+                    <ul class="sidebar-footer display-center">
+                        <li class="sidebar-options-content">
+                            <div class="sidebar-footer-options">
+                                <p>Información Prensa Derechos de autor Contactar Creadores Publicidad Desarrolladores</p>
+                            </div>
+                        </li>
+                        <li class="sidebar-options-content">
+                            <div class="sidebar-footer-policy">
+                                <p>Términos Privacidad Política y seguridad Cómo funciona YouTube Probar funcionalidades</p>
+                            </div>
+                        </li>
+                        <li class="sidebar-options-content">
+                            <div class="sidebar-footer-copy">
+                                <p>© 2023 Google LLC</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section> 
+        <section id="blockVideo" class="block-video-container">
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/juampis_live_show.webp" alt="The Juanpis Live Show">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>1:15:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/juampis_live_show_channel_image.jpg" alt="The Juanpis Live Show image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>The Juanpis Live Show - Entrevista a Alberto Linero</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Juanpis Gonzales</span>
+                            <i class="material-icons">music_note</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>k visualizaciones -</span>
+                            <span>hace 6 meses</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/date_un_vlog.webp" alt="Date un Vlog">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>5:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/date_un_vlog_image.jpg" alt="Date un Vlog image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>OPPENHEIMER:Todo lo que tienes que saber ANTES de ver la película (1/5)</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Date un Vlog</span>
+                            <i class="material-icons">check_circle</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>41 k visualizaciones - hace 2 horas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/ciencia_de_sofa.webp" alt="Ciencia de sofa">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>5:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/ciencia_de_sofa_image.jpg" alt="Ciencia de Sofa image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>Tabla periódica / EL CIRCONIO, un elemento que ayuda a calcular la EDAD DE LA TIERRA</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Ciencia de Sofa</span>
+                            <i class="material-icons">check_circle</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>294 k visualizaciones - hace 2 años</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/cristina scabbia.jpg" alt="Hidden Station">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>5:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/hidden_station_image.jpg" alt="Hidden Station image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>17 Dream of the Beast (DLC) - Metal Hellsinger Dream of the Beast (Official Soundtrack)</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Hidden Station</span>
+                            <i class="material-icons">music_note</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>7,1 k visualizaciones - hace 3 meses</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/gemelos_identicos.jpg" alt="La Risa Cura">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>48:28</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/la_risa_cura_image.jpg" alt="La Risa Cura image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>CAMILO DIAZ Y COMPETENCIA ENTRE HERMANOS - LA RISA CURA</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>La Risa Cura</span>
+                            <i class="material-icons">check_circle</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>33 k visualizaciones - hace 14 horas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/el_prometeo_moderno.jpg" alt="VSXProject">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>9:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/vsx_project.jpg" alt="VSXProject image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>Reseña Oppenheimer: El Prometeo moderno - VSX Project</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>VSXProject</span>
+                            <i class="material-icons">check_circle</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>150 k visualizaciones - hace 15 horas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/el_apocalipsis_de_videojuegos.jpg" alt="Levelup.com">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>5:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/level_up_image.jpg" alt="Levelup image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>EL APOCALIPSIS de videjuegos del que no te hablan</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>levelup.com</span>
+                            <i class="material-icons">check_circle</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>39 k visualizaciones - hace 10 horas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/el_pueblo_espero.jpg" alt="Canal REDMÁSTV">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>5:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/canal_redmas_image.jpg" alt="Canal REDMÁSTV image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>El pueblo esperó 200 capítulos para ver éste especial de la Tele Letal</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Canal REDMÁSTV</span>
+                            <i class="material-icons">check_circle</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>107 k visualizaciones - hace 2 días</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/christoph_waltz.jpg" alt="The Tonight Show Starring Jimmy Fallon">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>1:15:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/the_tonight_image.jpg" alt="The Tonight Show Starring Jimmy Fallon image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>Christoph Waltz Gives Jimmy Fallon a German Words Quiz</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>The Tonight Show Starring Jimmy Fallon</span>
+                            <i class="material-icons">check_circle</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>20 M visualizaciones - hace 4 años</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/chernobil_como_viven.jpg" alt="BBC News Mundo">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>5:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/bbc_news_image.jpg" alt="BBC News Mundo image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>Chernobyl: cómo viven quienes volvieron a la zona del peor accidente nuclear de la historia</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>BBC News Mundo</span>
+                            <i class="material-icons">check_circle</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>2,7 M visualizaciones - hace 3 años</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/precio_de_la_tecnico.jpg" alt="Señor Biter">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>5:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/señor_biter_image.jpg" alt="Señor Biter image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>Precio de la técnico-mecánica se INCREMENTA este 1 de agosto</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Señor Biter</span>
+                            <i class="material-icons">check_circle</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>28 k visualizaciones - hace 1 día</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/asi_funciona_la_cabeza.jpg" alt="La Pulla">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>5:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/la_pulla_image.jpg" alt="La Pulla image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>Así funciona la cabeza del mejor presidente de la historia de Colombia / La Pulla</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>La Pulla</span>
+                            <i class="material-icons">check_circle</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>1,3 M visualizaciones - hace 2 años</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/Juan_Daniel_Oviedo.jpg" alt="Julio Sanchez Cristo">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>9:35</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/julio_sanchez_image.jpg" alt="Julio Sanchez Cristo">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>Juan Daniel Oviedo estaría INHABILITADO para aspirar a la alcaldía de Bogotá</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Julio Sanchez Cristo</span>
+                            <i class="material-icons">music_note</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>524 visualizaciones .</span>
+                            <span>hace 1 hora</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/lluvias_inexplicables.jpg" alt="Nestor Armando Alzate- Y lógico">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>20:38</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/nestor_armando_image.jpg" alt="Nestor Armando Alzate- Y lógico">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>¡Lluvias inexplicables!</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Néstor Armando Alzate - Y lógico</span>
+                            <i class="material-icons">check_circle</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>11 k visualizaciones - hace 1 año</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/los_puentes_de_madison.jpg" alt="Serafin">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>5:11</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/serafin_image.jpg" alt="Serafin">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>LOS PUENTES DE MADISON - RESEÑA EN ESPAÑOL.</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Serafín</span>
+                            
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>895 visualizaciones - hace 2 días</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/cristina scabbia.jpg" alt="Hidden Station">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>5:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/hidden_station_image.jpg" alt="Hidden Station image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>17 Dream of the Beast (DLC) - Metal Hellsinger Dream of the Beast (Official Soundtrack)</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Hidden Station</span>
+                            <i class="material-icons">music_note</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>7,1 k visualizaciones - hace 3 meses</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/juampis_live_show.webp" alt="The Juanpis Live Show">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>1:15:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/juampis_live_show_channel_image.jpg" alt="The Juanpis Live Show image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>The Juanpis Live Show - Entrevista a Alberto Linero</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Juanpis Gonzales</span>
+                            <i class="material-icons">music_note</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>k visualizaciones .</span>
+                            <span>hace 6 meses</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/date_un_vlog.webp" alt="Date un Vlog">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>5:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/date_un_vlog_image.jpg" alt="Date un Vlog image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>OPPENHEIMER:Todo lo que tienes que saber ANTES de ver la película (1/5)</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Date un Vlog</span>
+                            <i class="material-icons">check_circle</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>41 k visualizaciones - hace 2 horas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/ciencia_de_sofa.webp" alt="Ciencia de sofa">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>5:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/ciencia_de_sofa_image.jpg" alt="Ciencia de Sofa image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>Tabla periódica / EL CIRCONIO, un elemento que ayuda a calcular la EDAD DE LA TIERRA</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Ciencia de Sofa</span>
+                            <i class="material-icons">check_circle</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>294 k visualizaciones - hace 2 años</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/el_secreto_mas_oscuro.jpg" alt="Historia incomprendida">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>31:35</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/historia_incomprendida_image.jpg" alt="Historia incomprendida">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>Los secretos más oscuros de Carl Jung</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Historia incomprendida</span>
+                           
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>135k visualizaciones - hace 6 días</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/juampis_live_show.webp" alt="The Juanpis Live Show">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>1:15:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/juampis_live_show_channel_image.jpg" alt="The Juanpis Live Show image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>The Juanpis Live Show - Entrevista a Alberto Linero</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Juanpis Gonzales</span>
+                            <i class="material-icons">music_note</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>k visualizaciones .</span>
+                            <span>hace 6 meses</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/date_un_vlog.webp" alt="Date un Vlog">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>5:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/date_un_vlog_image.jpg" alt="Date un Vlog image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>OPPENHEIMER:Todo lo que tienes que saber ANTES de ver la película (1/5)</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Date un Vlog</span>
+                            <i class="material-icons">check_circle</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>41 k visualizaciones - hace 2 horas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/ciencia_de_sofa.webp" alt="Ciencia de sofa">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>5:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/ciencia_de_sofa_image.jpg" alt="Ciencia de Sofa image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>Tabla periódica / EL CIRCONIO, un elemento que ayuda a calcular la EDAD DE LA TIERRA</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Ciencia de Sofa</span>
+                            <i class="material-icons">check_circle</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>294 k visualizaciones - hace 2 años</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-video-content">
+                <div class="card-video">
+                    <img src="../static/assets/img/cristina scabbia.jpg" alt="Hidden Station">
+                    <div class="timer-container">
+                        <div class="timer-content display-center">
+                            <span>5:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-video-description">
+                    <div class="card-video-image">
+                        <img src="../static/assets/img/hidden_station_image.jpg" alt="Hidden Station image">
+                    </div>
+                    <div class="card-video-text">
+                        <div class="card-video-title">
+                            <h2>17 Dream of the Beast (DLC) - Metal Hellsinger Dream of the Beast (Official Soundtrack)</h2>
+                        </div>
+                        <div class="card-video-info">
+                            <span>Hidden Station</span>
+                            <i class="material-icons">music_note</i>
+                        </div>
+                        <div class="card-video-views">
+                            <span id="numberViews"></span>
+                            <span>7,1 k visualizaciones - hace 3 meses</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>   
+    </main>
+    <script src="../static/assets/js/script.js"></script>    
+</body>
+</html>
